@@ -10,7 +10,7 @@ import urllib2
 if os.getuid() != 0: # Valida si el script esta siendo corrido como root
     print("Debes ejecutar este script como root.")
     sys.exit(1)
-parser = argparse.ArgumentParser(description='Esta herramienta contruida con fines educacionales permite simular el comportamiento de  un ataque de denegacion de servicio distribuida basado en reflexion utilizando el protocolo SNMP (DDoS SNMP reflected attack). ') # Esta y las siguientes 4 lineas controlan y definen los argumentos ingresados
+parser = argparse.ArgumentParser(description='Esta herramienta contruida con fines educacionales permite simular el comportamiento de  un ataque de denegacion de servicio distribuida basado en reflexion utilizando el protocolo SNMP V2c (DDoS SNMP reflected attack). ') # Esta y las siguientes 4 lineas controlan y definen los argumentos ingresados
 parser.add_argument('-d', action="store",dest='snmp_server', help='La IP destino del servidor SNMP(argumento mandatorio)')
 parser.add_argument('-c', action="store",dest='community', help='La comunidad SNMP(por defecto es public).')
 parser.add_argument('-p', action="store",dest='port', help='El puerto destino del servidor SNMP(por defecto es UDP 161).')
