@@ -1,4 +1,4 @@
-# Autor: Juan Esteban Valencia Pantoja jevalenciap@gmail.com escrita para Dragonjar
+# Autor: Juan Esteban Valencia Pantoja jevalenciap@gmail.com 
 import sys
 import random
 import logging # La siguiente  linea es usada para omitir los errores de IPV6 que pueden aparecer por importar scapy.
