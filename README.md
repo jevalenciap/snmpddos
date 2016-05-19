@@ -1,4 +1,7 @@
 snmpddos
 ========
 
-Script en python que permite explotar servidores SNMP para realizar DDoS basado en reflexión. Se ejecuta perfectamente en Backtrack R3 y Kali Linux.
+Mayor información sobre el script se puede encontrar en las siguientes entradas de estos blogs:
+
+http://www.dragonjar.org/explotando-ddos-usando-servidores-snmp.xhtml
+http://www.securitybydefault.com/2014/06/snmpddos-exploiting-snmp-for-ddos.html
